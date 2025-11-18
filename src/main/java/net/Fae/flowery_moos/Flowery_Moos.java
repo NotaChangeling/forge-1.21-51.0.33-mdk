@@ -1,6 +1,8 @@
-package net.Fae.Moos;
+package net.Fae.flowery_moos;
 
 import com.mojang.logging.LogUtils;
+import net.Fae.flowery_moos.item.Moditems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -16,20 +18,20 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(Moos.MOD_ID)
-public class Moos
+@Mod(Flowery_Moos.MOD_ID)
+public class Flowery_Moos
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "flowery_moos";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public Moos()
+    public Flowery_Moos()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 
-
+        Moditems.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -50,7 +52,9 @@ public class Moos
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(Moditems.ANCIENT_PETAL);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
