@@ -14,6 +14,10 @@ public class Moditems {
 
     public static final RegistryObject<Item> ANCIENT_PETAL = ITEMS.register("ancient_petal",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> FROZEN_PETAL = ITEMS.register("frozen_petal",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ANCIENT_DANDY = ITEMS.register("ancient_dandy",
+            () -> new Item(new Item.Properties()));
 
 
 

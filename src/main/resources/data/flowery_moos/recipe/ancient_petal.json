@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 900,
+  "experience": 1.00,
+  "ingredient": {
+    "item": "flowery_moos:frozen_petal"
+  },
+  "result": {
+    "id": "flowery_moos:ancient_petal"
+  }
+}

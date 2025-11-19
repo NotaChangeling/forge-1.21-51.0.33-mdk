@@ -1,3 +1,8 @@
 {
-  "item.flowery_moos.ancient_petal" : "Ancient Petal"
+  "item.flowery_moos.ancient_petal": "Ancient Petal",
+  "item.flowery_moos.frozen_petal": "Frozen Petal",
+  "item.flowery_moos.ancient_dandy": "Ancient Dandelion",
+
+
+  "creativetab.flowery_moos.moos_items": "Moos Items"
 }

@@ -1,6 +1,7 @@
 package net.Fae.flowery_moos;
 
 import com.mojang.logging.LogUtils;
+import net.Fae.flowery_moos.item.ModCreativeModeTabs;
 import net.Fae.flowery_moos.item.Moditems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -39,6 +40,8 @@ public class Flowery_Moos
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -54,6 +57,12 @@ public class Flowery_Moos
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(Moditems.ANCIENT_PETAL);
+        }
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(Moditems.FROZEN_PETAL);
+        }
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+
         }
     }
 
