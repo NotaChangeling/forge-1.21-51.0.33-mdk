@@ -1,6 +1,8 @@
 package net.Fae.flowery_moos.item;
 
 import net.Fae.flowery_moos.Flowery_Moos;
+import net.Fae.flowery_moos.item.custom.ModFoodProperties;
+import net.Fae.flowery_moos.item.custom.NectarBottleItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,8 +18,10 @@ public class Moditems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> FROZEN_PETAL = ITEMS.register("frozen_petal",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ANCIENT_DANDY = ITEMS.register("ancient_dandy",
-            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> NECTAR_BOTTLE = ITEMS.register("nectar_bottle",
+            () -> new NectarBottleItem(new Item.Properties().stacksTo(1)));
+
 
 
 

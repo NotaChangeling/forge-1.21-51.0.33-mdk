@@ -64,6 +64,10 @@ public class Flowery_Moos
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 
         }
+
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(Moditems.NECTAR_BOTTLE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

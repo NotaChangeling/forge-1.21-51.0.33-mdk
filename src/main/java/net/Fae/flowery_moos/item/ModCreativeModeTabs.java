@@ -20,7 +20,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayPerameters, output) -> {
                         output.accept(Moditems.ANCIENT_PETAL.get());
                         output.accept(Moditems.FROZEN_PETAL.get());
-                        output.accept(Moditems.ANCIENT_DANDY.get());
+                        output.accept(Moditems.NECTAR_BOTTLE.get());
 
                     }).build());
 
