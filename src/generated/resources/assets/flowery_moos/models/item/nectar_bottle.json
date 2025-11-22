@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "flowery_moos:item/nectar_bottle"
+  }
+}
