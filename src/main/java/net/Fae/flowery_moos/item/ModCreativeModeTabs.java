@@ -2,6 +2,7 @@ package net.Fae.flowery_moos.item;
 
 import com.sun.jna.platform.win32.COM.util.annotation.ComObject;
 import net.Fae.flowery_moos.Flowery_Moos;
+import net.Fae.flowery_moos.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,7 +21,9 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayPerameters, output) -> {
                         output.accept(Moditems.ANCIENT_PETAL.get());
                         output.accept(Moditems.FROZEN_PETAL.get());
+
                         output.accept(Moditems.NECTAR_BOTTLE.get());
+
 
                     }).build());
 
